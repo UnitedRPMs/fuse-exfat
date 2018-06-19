@@ -1,7 +1,7 @@
 Name:           fuse-exfat
 Summary:        Free exFAT file system implementation
-Version:        1.2.3
-Release:        1%{?dist}
+Version:        1.2.8
+Release:        3%{?dist}
 License:        GPLv2+
 Group:          System Environment/Base
 Source0:        https://github.com/relan/exfat/releases/download/v%{version}/fuse-exfat-%{version}.tar.gz
@@ -19,14 +19,14 @@ for SDXC memory cards.
 
 %build
 %configure
-
-make %{?_smp_mflags}
+%make_build
 
 
 %install
-make install DESTDIR=$RPM_BUILD_ROOT INSTALL="install -p"
+%make_install
+
+
 mkdir -p %{buildroot}%{_mandir}/man8/
-cp -a fuse/mount.exfat-fuse.8 %{buildroot}%{_mandir}/man8/mount.exfat-fuse.8
 ln -s %{_mandir}/man8/mount.exfat-fuse.8 %{buildroot}%{_mandir}/man8/mount.exfat.8
 
 
@@ -37,6 +37,10 @@ ln -s %{_mandir}/man8/mount.exfat-fuse.8 %{buildroot}%{_mandir}/man8/mount.exfat
 %{_mandir}/man8/*
 
 %changelog
+
+* Mon Jun 18 2018 David Vásquez <davidva AT tuta DOT io> - 1.2.8-3
+- Updated to 1.2.8
+
 * Wed Mar 30 2016 Orion Poplawski <orion@cora.nwra.com> - 1.2.3-1
 - Update to 1.2.3
 

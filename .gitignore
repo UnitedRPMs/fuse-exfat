@@ -1,1 +1,7 @@
-fuse-exfat-1.1.0.tar.gz
+BUILD/*
+BUILDROOT/*
+RPMS/*
+SPECS/*
+SRPMS/*
+fuse*.tar.gz
+.directory
