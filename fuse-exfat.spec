@@ -7,6 +7,7 @@ Group:          System Environment/Base
 Source0:        https://github.com/relan/exfat/releases/download/v%{version}/fuse-exfat-%{version}.tar.gz
 URL:            https://github.com/relan/exfat
 BuildRequires:  fuse-devel
+BuildRequires:  gcc-c++
 
 %description
 This driver is the first free exFAT file system implementation with write
