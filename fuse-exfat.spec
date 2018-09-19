@@ -1,6 +1,6 @@
 Name:           fuse-exfat
 Summary:        Free exFAT file system implementation
-Version:        1.2.8
+Version:        1.3.0
 Release:        3%{?dist}
 License:        GPLv2+
 Group:          System Environment/Base
@@ -38,6 +38,9 @@ ln -s %{_mandir}/man8/mount.exfat-fuse.8 %{buildroot}%{_mandir}/man8/mount.exfat
 %{_mandir}/man8/*
 
 %changelog
+
+* Mon Sep 17 2018 David Va <davidva AT tuta DOT io> 1.3.0-1
+- Updated to 1.3.0
 
 * Mon Jun 18 2018 David Vásquez <davidva AT tuta DOT io> - 1.2.8-3
 - Updated to 1.2.8
